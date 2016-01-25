@@ -121,5 +121,6 @@ AUTH_USER_MODEL='reviewers.Reviewer'
 AUTHENTICATION_BACKENDS=['reviewers.backends.EmailAuthBackend',]
 
 STATIC_URL = '/static/'
+STATIC_ROOT= 'staticfiles'
 #LOGIN_REDIRECT_URL = '/reviews/review/user'#default mapping for the landing page after login therefore done at project configuration level
 #LOGIN_URL='reviewers:login'
