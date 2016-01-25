@@ -1,0 +1,5 @@
+{% extends 'reviews/review_list.html' %}
+
+{% block title %}
+<h2>Review{{ latest_review_list.count|pluralize }} by {{ username }}</h2>
+{% endblock %}

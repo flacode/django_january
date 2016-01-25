@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% block title %}
+<h2>Register</h2>
+{% endblock %}
+
+{% block content %}
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+<form method="post" class="form" action="{% url 'reviewers:register' %}">
+    {% csrf_token %}
+    {%   bootstrap_form_errors form layout='inline' %}
+    {% bootstrap_form form layout='vertical'%}<!--inline labels, can also be horizontal or vertical-->
+    {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      {% bootstrap_icon "user" %} Register
+    </button>
+    {% endbuttons %}
+</form>
+{% endblock %}
